@@ -21,8 +21,6 @@ const HeroSection = () => {
             <h1 className="text-white mb-4 text-2xl sm:text-3xl lg:text-4xl font-extrabold">
               <TypeAnimation
                 sequence={[
-                  // "Curtis",
-                  // 1000,
                   "I'm an aficionado of all things tech,",
                   1000,
                   "Scrum.org certified (PSM I and PSPO I),",
@@ -31,8 +29,6 @@ const HeroSection = () => {
                   1000,
                   "an AWS Certified Cloud Practitioner,",
                   1000,
-                  // "Curtis",
-                  // 1000,
                   "a fan of Python,",
                   1000,
                   "Linux Professional Institute certified,",
@@ -43,15 +39,14 @@ const HeroSection = () => {
                   250,
                   "and CSS,",
                   1000,
-                  // "Curtis",
-                  // 1000,
                   "an aspiring Full Stack engineer,",
                   1000,
                   "gaining experience with the MERN stack.",
                   1000,
                 ]}
                 wrapper="span"
-                speed={50}
+                speed={40}
+                cursor={false}
                 style={{ display: "inline-block" }}
                 omitDeletionAnimation={true}
                 repeat={Infinity}
