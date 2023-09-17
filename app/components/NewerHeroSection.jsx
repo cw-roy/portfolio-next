@@ -1,6 +1,6 @@
 "use client";
 
-// HeroSection.jsx
+// NewerHeroSection.jsx
 
 import React from "react";
 import Image from "next/image";
@@ -8,7 +8,7 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const HeroSection = () => {
+const NewerHeroSection = () => {
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -23,7 +23,7 @@ const HeroSection = () => {
               Hello! I&apos;m Curtis, and
             </span>
           </h1>
-          <div style={{ minHeight: "4rem" }}>
+          <div>
             <h1 className="text-white mb-4 text-2xl sm:text-3xl lg:text-4xl font-extrabold">
               <TypeAnimation
                 sequence={[
@@ -77,27 +77,8 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </div>
-      <div className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-        <p>This will be some text. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-      </div>
-      <div>
-        <Link
-          href="/contact"
-          className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 hover:bg-slate-200 text-white"
-        >
-          More Info
-        </Link>
-        <Link
-          href="/"
-          className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 hover:bg-slate-800 text-white mt-3"
-        >
-          <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-            Place Holder
-          </span>
-        </Link>
-      </div>
     </section>
   );
 };
 
-export default HeroSection;
+export default NewerHeroSection;
