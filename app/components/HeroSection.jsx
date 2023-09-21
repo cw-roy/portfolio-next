@@ -78,7 +78,7 @@ const HeroSection = () => {
         </motion.div>
       </div>
       <div className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-        <p>This will be some text. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        <p>This will be some text.</p>
       </div>
       <div>
         <Link

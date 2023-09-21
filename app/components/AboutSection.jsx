@@ -1,67 +1,119 @@
 "use client";
-import Link from "next/link";
-import React, { useState } from "react";
-import NavLink from "./NavLink";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
+import React, { useTransition, useState } from "react";
+import Image from "next/image";
+import TabButton from "./TabButton";
 
-const navLinks = [
+const TAB_DATA = [
   {
-    title: "About",
-    path: "#about",
+    title: "Skills",
+    id: "skills",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Git / GitHub</li>
+        <li>Python</li>    
+        <li>HTML, CSS</li>
+        <li>JavaScript</li>
+        <li>MongoDB</li>
+        <li>Express</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Next.js</li>
+      </ul>
+    ),
   },
   {
-    title: "Projects",
-    path: "#projects",
+    title: "Platforms",
+    id: "platforms",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Linux (Ubuntu)</li>
+        <li>MacOS</li>
+        <li>Microsoft: DOS 6.22 through Windows 11</li>
+      </ul>
+    ),
   },
   {
-    title: "Contact",
-    path: "#contact",
+    title: "Certifications",
+    id: "certifications",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>AWS Cloud Practitioner</li>
+        <li>Scrum.org PSM I (Scrum Master)</li>
+        <li>Scrum.org PSPO I (Product Owner)</li>
+        <li>Linux Professional Institute (LPIC)</li>
+        <li>CompTIA A+, Network+</li>
+        <li>Microsoft Certified Solutions Associate (MCSA)</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Education",
+    id: "education",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Laser Optics Technology</li>
+        <li>Luna Vocational Institute, Las Vegas, NM</li>
+      </ul>
+    ),
   },
 ];
 
-const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+const AboutSection = () => {
+  const [tab, setTab] = useState("skills");
+  const [isPending, startTransition] = useTransition();
+
+  const handleTabChange = (id) => {
+    startTransition(() => {
+      setTab(id);
+    });
+  };
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
-        >
-          LOGO
-        </Link>
-        <div className="mobile-menu block md:hidden">
-          {!navbarOpen ? (
-            <button
-              onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+    <section className="text-white" id="about">
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <Image src="/images/desk.jpeg" width={500} height={500} />
+        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <p className="text-base lg:text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+          </p>
+          <div className="flex flex-row justify-start mt-8">
+            <TabButton
+              selectTab={() => handleTabChange("skills")}
+              active={tab === "skills"}
             >
-              <Bars3Icon className="h-5 w-5" />
-            </button>
-          ) : (
-            <button
-              onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              {" "}
+              Skills{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("platforms")}
+              active={tab === "platforms"}
             >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
-          )}
-        </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink href={link.path} title={link.title} />
-              </li>
-            ))}
-          </ul>
+              {" "}
+              Platforms{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("certifications")}
+              active={tab === "certifications"}
+            >
+              {" "}
+              Certifications{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("education")}
+              active={tab === "education"}
+            >
+              {" "}
+              Education{" "}
+            </TabButton>
+             </div>
+          <div className="mt-8">
+            {TAB_DATA.find((t) => t.id === tab).content}
+          </div>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
-    </nav>
+    </section>
   );
 };
 
-export default Navbar;
+export default AboutSection;
