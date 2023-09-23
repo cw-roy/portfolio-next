@@ -72,7 +72,7 @@ const HeroSection = () => {
         </motion.div>
       </div>
       <div className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-        <p>Take a look around and see what I've learned!</p>
+        <p>Take a look around and see what I&apos;ve learned!</p>
       </div>
       <div>
         <Link
