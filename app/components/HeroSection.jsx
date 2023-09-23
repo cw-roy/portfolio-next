@@ -27,17 +27,11 @@ const HeroSection = () => {
             <h1 className="text-white mb-4 text-2xl sm:text-3xl lg:text-4xl font-extrabold">
               <TypeAnimation
                 sequence={[
-                  "I'm an aficionado of all things tech,",
+                  "I'm an aspiring Full Stack engineer,",
                   1000,
-                  "Scrum.org certified (PSM I and PSPO I),",
-                  1000,
-                  "a Level 2 Desktop support consultant,",
-                  1000,
-                  "an AWS Certified Cloud Practitioner,",
+                  "an aficionado of all things tech,",
                   1000,
                   "a fan of Python,",
-                  1000,
-                  "Linux Professional Institute certified,",
                   1000,
                   "having fun learning JavaScript,",
                   250,
@@ -45,10 +39,10 @@ const HeroSection = () => {
                   250,
                   "and CSS,",
                   1000,
-                  "an aspiring Full Stack engineer,",
+                  "gaining experience with the MERN stack,",
                   1000,
-                  "gaining experience with the MERN stack.",
-                  1000,
+                  "and I built this to get practice with Next.JS.",
+                  2000,
                 ]}
                 wrapper="span"
                 speed={40}
@@ -78,7 +72,7 @@ const HeroSection = () => {
         </motion.div>
       </div>
       <div className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-        <p>This will be some text.</p>
+        <p>Take a look around and see what I've learned!</p>
       </div>
       <div>
         <Link
