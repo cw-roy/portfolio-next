@@ -75,6 +75,7 @@ const AboutSection = () => {
         <Image
           className="rounded-xl"
           src="/images/desk.jpeg"
+          alt="A desk with computers"
           width={500}
           height={500}
         />
