@@ -7,58 +7,85 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Project 1 Title",
-    description: "Project 1 description",
-    image: "/images/placeholder.png", // replace with image from /images/projects/
+    title: "Next.js portfolio",
+    description: "My current web project",
+    image: "/images/projects/portfolio.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/cw-roy/portfolio-next",
+    previewUrl: "https://portfolio-next-np8m-git-main-cw-roy.vercel.app/",
   },
   {
     id: 2,
-    title: "Project 2 Title",
-    description: "Project 2 description",
-    image: "/images/placeholder.png", // replace with image from /images/projects/
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Python media converter",
+    description: "Uses Python and FFMpeg to convert video files",
+    image: "/images/projects/mediaconv.png",
+    tag: ["All", "Python"],
+    gitUrl: "https://github.com/cw-roy/mediaconv_CL/tree/main",
+    previewUrl: "/images/projects/mediaconv.png",
   },
   {
     id: 3,
-    title: "Project 3 Title",
-    description: "Project 3 description",
-    image: "/images/placeholder.png", // replace with image from /images/projects/
+    title: "One of my first web projects",
+    description: "A simple e-commerce site mockup",
+    image: "/images/projects/fse_bootstrap.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/cw-roy/fse_bootstrap",
+    previewUrl: "https://cw-roy.github.io/fse_bootstrap/",
   },
   {
     id: 4,
-    title: "Project 4 Title",
-    description: "Project 4 description",
-    image: "/images/placeholder.png", // replace with image from /images/projects/
-    tag: ["All", "Python"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "A JavaScript class project",
+    description: "This is a basic dice roller",
+    image: "/images/projects/dice_roll.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/cw-roy/fse_diceRoll",
+    previewUrl: "https://cw-roy.github.io/fse_diceRoll/",
   },
   {
     id: 5,
-    title: "Project 5 Title",
-    description: "Project 5 description",
-    image: "/images/placeholder.png", // replace with image from /images/projects/
-    tag: ["All", "Python"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Another JavaScript class project",
+    description: "A sports game (with sound effects!)",
+    image: "/images/projects/hatchet.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/cw-roy/fse_jsSportsGame",
+    previewUrl: "https://cw-roy.github.io/fse_jsSportsGame/",
   },
   {
     id: 6,
-    title: "Project 6 Title",
-    description: "Project 6 description",
-    image: "/images/placeholder.png", // replace with image from /images/projects/
-    tag: ["All", "Python"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "The Magic 8 Ball",
+    description: "Silly, but sometimes useful",
+    image: "/images/projects/eightball.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/cw-roy/fse_magic8Ball",
+    previewUrl: "https://cw-roy.github.io/fse_magic8Ball/",
   },
+  // {
+  //   // id: 7,
+  //   // title: "Project 6 Title",
+  //   // description: "Project 6 description",
+  //   // image: "/images/placeholder.png", // replace with image from /images/projects/
+  //   // tag: ["All", "Web"],
+  //   // gitUrl: "/",
+  //   // previewUrl: "/",
+  // },
+  // {
+  //   // id: 8,
+  //   // title: "Project 6 Title",
+  //   // description: "Project 6 description",
+  //   // image: "/images/placeholder.png", // replace with image from /images/projects/
+  //   // tag: ["All", "Web"],
+  //   // gitUrl: "/",
+  //   // previewUrl: "/",
+  // },
+  // {
+  //   // id: 9,
+  //   // title: "Project 6 Title",
+  //   // description: "Project 6 description",
+  //   // image: "/images/placeholder.png", // replace with image from /images/projects/
+  //   // tag: ["All", "Web"],
+  //   // gitUrl: "/",
+  //   // previewUrl: "/",
+  // },
 ];
 
 const ProjectsSection = () => {
@@ -92,13 +119,13 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="Python"
+          isSelected={tag === "Python"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Python"
-          isSelected={tag === "Python"}
+          name="Web"
+          isSelected={tag === "Web"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

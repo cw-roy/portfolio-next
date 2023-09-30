@@ -74,9 +74,9 @@ const HeroSection = () => {
       <div className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
         <p>Take a look around and see what I&apos;ve learned!</p>
       </div>
-      <div>
+      {/* <div>
         <Link
-          href="/contact"
+          href="/#contact"
           className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 hover:bg-slate-200 text-white"
         >
           More Info
@@ -89,7 +89,7 @@ const HeroSection = () => {
             Place Holder
           </span>
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 };
