@@ -72,12 +72,26 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap- sm:py-16 xl:px-16">
-        <Image className="rounded-xl" src="/images/desk.jpeg" width={500} height={500} />
+        <Image
+          className="rounded-xl"
+          src="/images/desk.jpeg"
+          width={500}
+          height={500}
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum.
+            I have just completed two intensive, instructor-led courses over the
+            past year, involving everything from modern cloud infrastructure to
+            full stack development. Below are a few of the skills I've gained,
+            along with industry certifications I hold, and other things I know
+            about. Scroll down a bit further and you'll see some of my recent
+            work. I'm most proud of this portfolio and my Python media
+            converter. The rest show my progress from learner and
+            goof-around-er, to an actual serious developer. Check out the links
+            to the GitHub repositories and, in the case of web projects, live
+            examples. As I build more and more cool stuff, this gallery of
+            success will continue to grow! Thanks for stopping by.
           </p>
           <div className="flex flex-row justify-start gap-10 mt-8">
             <TabButton
