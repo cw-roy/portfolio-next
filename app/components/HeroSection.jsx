@@ -27,7 +27,7 @@ const HeroSection = () => {
             <h1 className="text-white mb-4 text-2xl sm:text-3xl lg:text-4xl font-extrabold">
               <TypeAnimation
                 sequence={[
-                  "I'm an aspiring Full Stack engineer,",
+                  "I'm a part time developer,",
                   1000,
                   "an aficionado of all things tech,",
                   1000,
@@ -38,8 +38,6 @@ const HeroSection = () => {
                   "and HTML,",
                   250,
                   "and CSS,",
-                  1000,
-                  "gaining experience with the MERN stack,",
                   1000,
                   "and I built this to get practice with Next.JS.",
                   2000,
@@ -72,24 +70,8 @@ const HeroSection = () => {
         </motion.div>
       </div>
       <div className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-        <p>Take a look around and see what I&apos;ve learned!</p>
+        <p>Take a look around and see what I&apos;m up to!</p>
       </div>
-      {/* <div>
-        <Link
-          href="/#contact"
-          className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 hover:bg-slate-200 text-white"
-        >
-          More Info
-        </Link>
-        <Link
-          href="/"
-          className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 hover:bg-slate-800 text-white mt-3"
-        >
-          <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-            Place Holder
-          </span>
-        </Link>
-      </div> */}
     </section>
   );
 };

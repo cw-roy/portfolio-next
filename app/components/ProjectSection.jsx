@@ -16,6 +16,15 @@ const projectsData = [
   },
   {
     id: 2,
+    title: "Python media converter v2.1",
+    description: "Now with hot freshness...Python / FFMpeg video converter",
+    image: "/images/projects/mediaconv.png",
+    tag: ["All", "Python"],
+    gitUrl: "https://github.com/cw-roy/mediaconv_2.1",
+    previewUrl: "/images/projects/mediaconv.png",
+  },
+  {
+    id: 3,
     title: "Python media converter",
     description: "Uses Python and FFMpeg to convert video files",
     image: "/images/projects/mediaconv.png",
@@ -24,7 +33,7 @@ const projectsData = [
     previewUrl: "/images/projects/mediaconv.png",
   },
   {
-    id: 3,
+    id: 4,
     title: "One of my first web projects",
     description: "A simple e-commerce site mockup",
     image: "/images/projects/fse_bootstrap.png",
@@ -33,7 +42,7 @@ const projectsData = [
     previewUrl: "https://cw-roy.github.io/fse_bootstrap/",
   },
   {
-    id: 4,
+    id: 5,
     title: "A JavaScript class project",
     description: "This is a basic dice roller",
     image: "/images/projects/dice_roll.png",
@@ -42,7 +51,7 @@ const projectsData = [
     previewUrl: "https://cw-roy.github.io/fse_diceRoll/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Another JavaScript class project",
     description: "A sports game (with sound effects!)",
     image: "/images/projects/hatchet.png",
@@ -51,7 +60,7 @@ const projectsData = [
     previewUrl: "https://cw-roy.github.io/fse_jsSportsGame/",
   },
   {
-    id: 6,
+    id: 7,
     title: "The Magic 8 Ball",
     description: "Silly, but sometimes useful",
     image: "/images/projects/eightball.png",
@@ -59,33 +68,6 @@ const projectsData = [
     gitUrl: "https://github.com/cw-roy/fse_magic8Ball",
     previewUrl: "https://cw-roy.github.io/fse_magic8Ball/",
   },
-  // {
-  //   // id: 7,
-  //   // title: "Project 6 Title",
-  //   // description: "Project 6 description",
-  //   // image: "/images/placeholder.png", // replace with image from /images/projects/
-  //   // tag: ["All", "Web"],
-  //   // gitUrl: "/",
-  //   // previewUrl: "/",
-  // },
-  // {
-  //   // id: 8,
-  //   // title: "Project 6 Title",
-  //   // description: "Project 6 description",
-  //   // image: "/images/placeholder.png", // replace with image from /images/projects/
-  //   // tag: ["All", "Web"],
-  //   // gitUrl: "/",
-  //   // previewUrl: "/",
-  // },
-  // {
-  //   // id: 9,
-  //   // title: "Project 6 Title",
-  //   // description: "Project 6 description",
-  //   // image: "/images/placeholder.png", // replace with image from /images/projects/
-  //   // tag: ["All", "Web"],
-  //   // gitUrl: "/",
-  //   // previewUrl: "/",
-  // },
 ];
 
 const ProjectsSection = () => {
